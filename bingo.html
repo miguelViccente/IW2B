@@ -55,13 +55,43 @@
                 <td>74</td>
             </tr>
         </tbody>
-
+    </table>
         <script>
-            Cartela_B = [11,13,15,03,07];
-            Cartela_I = [17,22,24,27,30];
-            Cartela_N = [34,37,40,43,45];
-            Cartela_G = [49,53,56,58,48];
-            Cartela_O = [66,69,71,61,74]
+          var  Cartela_B = [11,13,15,03,07];
+          var  Cartela_I = [17,22,24,27,30];
+          var  Cartela_N = [34,37,40,43,45];
+          var  Cartela_G = [49,53,56,58,48];
+          var  Cartela_O = [66,69,71,61,74];
+
+            function GerrarArray(NumeroInicial, quantidade) {
+                var retorno = []
+                for (var i = 0; i < quantidade; i++)
+            {
+                    retorno.push(Numeroinicial)
+                    NumeroInicial++;
+            }     
+            return retorno
+
+         }
+         Cartela_B = GerarArray (1,15);
+         console.log("Array da coluna B")
+         console.log(Cartela_B)
+
+         Cartela_I = GerarArray (16,15);
+         console.log("Array da coluna I")
+         console.log(Cartela_I)
+
+         Cartela_N = GerarArray (31,15);
+         console.log("Array da coluna N")
+         console.log(Cartela_N)
+
+         Cartela_G = GerarArray (46,15);
+         console.log("Array da coluna G")
+         console.log(Cartela_G)
+
+         Cartela_O = GerarArray (61,15);
+         console.log("Array da coluna O")
+         console.log(Cartela_O)
         </script>
     
 </body>
