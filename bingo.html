@@ -21,7 +21,7 @@
         </thead>
         <tbody>
             <tr>
-                <td id="b1" onclick="MarcarSorteado()">11</td>
+                <td id="b1" onclick="MarcarSorteado('b1', this)">11</td>
                 <td id="i1">17</td>
                 <td id="n1">34</td>
                 <td id="g1">49</td>
@@ -64,7 +64,7 @@
             Cartela_G = [49,53,56,58,48];
             Cartela_O = [66,69,71,61,74];
 
-            function GerarArray(NumeroInicial, quantidade) {
+            function GerarArray(NumeroInicial, quantidade){
                 var retorno = []
                 for (var i = 0; i < quantidade; i++)
             {
@@ -100,8 +100,22 @@
          console.log(b2);
          console.log(b1);
 
-         function MarcarSorteado(){
-             alert("Deu certo o clique")
+
+
+         function MarcarSorteado(nomeId, elemento){
+             console.log("Elemento=")
+             console.log(elemento)
+             console.log(nomeId)
+             elemento.style.backgroundColor = "royalblue"
+
+             if(elemento.style.backgroundColor == "royalblue")
+            {
+                alert("a cor é azul royal")
+            }
+            else
+            {
+
+            }
          }
 
         </script>
