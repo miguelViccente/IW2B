@@ -49,20 +49,30 @@
                 <td id="o4">61</td>
             </tr>
             <tr>
-                <td id="b4">07</td>
-                <td id="i4">30</td>
-                <td id="n4">45</td>
-                <td id="g4">49</td>
-                <td id="o4">74</td>
+                <td id="b5">07</td>
+                <td id="i5">30</td>
+                <td id="n5">45</td>
+                <td id="g5">49</td>
+                <td id="o5"0>74</td>
             </tr>
         </tbody>
     </table>
+
+    <button onclick="GerarCartela()">
+        Gerar Cartela
+    </button>
+
+        
+
+
         <script>
             Cartela_B = [11,13,15,03,07];
             Cartela_I = [17,22,24,27,30];
             Cartela_N = [34,37,40,43,45];
             Cartela_G = [49,53,56,58,48];
             Cartela_O = [66,69,71,61,74];
+
+
 
             function GerarArray(NumeroInicial, quantidade){
                 var retorno = []
@@ -117,6 +127,30 @@
 
             }
          }
+
+         function GerarCartela()
+         {
+             for(var i = 1; i <= 5; i++ )
+             {
+                 var td = document.getElementById("b"+i)
+                 td.innerText = Cartela_B[i]
+
+                 var td = document.getElementById("i"+i)
+                 td.innerText = Cartela_I[i]
+
+                 var td = document.getElementById("n"+i)
+                 td.innerText = Cartela_N[i]
+
+                 var td = document.getElementById("g"+i)
+                 td.innerText = Cartela_G[i]
+
+                 var td = document.getElementById("o"+i)
+                 td.innerText = Cartela_O[i]
+
+             }
+         }
+
+
 
         </script>
     </div>
