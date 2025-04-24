@@ -62,6 +62,8 @@
         Gerar Cartela
     </button>
 
+            
+
         
 
 
@@ -130,6 +132,16 @@
 
          function GerarCartela()
          {
+             Cartela_B = MisturarArray(GerarArray(1,15));
+
+             Cartela_I = MisturarArray(GerarArray(16,15));
+
+             Cartela_N = MisturarArray(GerarArray(31,15));
+
+             Cartela_G = MisturarArray(GerarArray(46,15));
+
+             Cartela_O = MisturarArray(GerarArray(61,15));
+
              for(var i = 1; i <= 5; i++ )
              {
                  var td = document.getElementById("b"+i)
@@ -151,7 +163,38 @@
          }
 
 
+            function NumeroAleatorio(numeroMinimo, numeroMaximo) {
 
+                var retorno = Math.floor(Math.random() + numeroMaximo)
+                if (retorno > 0 && retorno >= numeroMinimo && retorno <= numeroMaximo)
+                {
+                    return retorno
+                }
+                else
+                {
+                    return NumeroAleatorio(numeroMinimo, numeroMaximo)
+                }
+            }
+
+            
+
+
+
+            function MisturarArray(array) 
+            { 
+                var aleatorio
+                var cont = array.lenght
+                var auxiliar 
+                while (cont != 0) 
+                {
+                    aleatorio = NumeroAleatorio(1, array.lenght)
+                    cont--
+                    auxiliar = array[cont]
+                    array[cont] = array[aleatorio]
+                    array[aleatorio] = auxiliar
+                }
+                return array
+            }
         </script>
     </div>
 </body>
