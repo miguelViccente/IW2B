@@ -1,5 +1,5 @@
 body, html{
-    margin: o;
+    margin: 0;
     padding: 0;
     height: 100%;
     background-color: grey;
@@ -25,5 +25,12 @@ table{
 thead{
     
     background-color: rgb(41, 73, 170);
+
+}
+
+button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
 }

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css"></link>
+    <link rel="stylesheet" href="bingo.css"></link>
     <title>Document</title>
 </head>
 <body>
@@ -147,25 +147,26 @@
                  var td = document.getElementById("b"+i)
                  td.innerText = Cartela_B[i]
 
-                 var td = document.getElementById("i"+i)
+                  td = document.getElementById("i"+i)
                  td.innerText = Cartela_I[i]
 
-                 var td = document.getElementById("n"+i)
+                  td = document.getElementById("n"+i)
                  td.innerText = Cartela_N[i]
 
-                 var td = document.getElementById("g"+i)
+                  td = document.getElementById("g"+i)
                  td.innerText = Cartela_G[i]
 
-                 var td = document.getElementById("o"+i)
+                  td = document.getElementById("o"+i)
                  td.innerText = Cartela_O[i]
 
              }
          }
 
 
-            function NumeroAleatorio(numeroMinimo, numeroMaximo) {
-
-                var retorno = Math.floor(Math.random() + numeroMaximo)
+            function NumeroAleatorio(numeroMinimo, numeroMaximo) 
+            {
+                console.log(numeroMaximo, numeroMinimo)
+                var retorno = Math.floor(Math.random() * numeroMaximo)
                 if (retorno > 0 && retorno >= numeroMinimo && retorno <= numeroMaximo)
                 {
                     return retorno
@@ -183,11 +184,11 @@
             function MisturarArray(array) 
             { 
                 var aleatorio
-                var cont = array.lenght
+                var cont = array.length
                 var auxiliar 
                 while (cont != 0) 
                 {
-                    aleatorio = NumeroAleatorio(1, array.lenght)
+                    aleatorio = NumeroAleatorio(1, array.length)
                     cont--
                     auxiliar = array[cont]
                     array[cont] = array[aleatorio]
